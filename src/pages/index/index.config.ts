@@ -1,4 +1,4 @@
 export default {
-  navigationBarTitleText: 'Taro-hooks',
+  navigationBarTitleText: '数字键盘',
   enableShareAppMessage: true,
 };
