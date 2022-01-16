@@ -14,6 +14,11 @@ const getPageScrollTop = (setScrollTop: React.Dispatch<React.SetStateAction<numb
   })
 }
 
+const findNextFocusId = (idList: number[], currentId: number): number => {
+  const currentIndex = idList.indexOf(currentId)
+  return currentIndex < idList.length - 1 ? idList[idList.indexOf(currentId) + 1] : idList[idList.length - 1]
+}
+
 export default () => {
   const [keyboardActive, setKeyboardActive] = useState(false)
   const [scrollTop, setScrollTop] = useState(0)
@@ -29,7 +34,7 @@ export default () => {
           id={'input' + item}
           placeholder={`请输入数字${item}...`}
           onConfirm={() => {
-            setNextFocusId(3)
+            setNextFocusId(findNextFocusId([...Array(30).keys()], item))
           }}
           enabled={item === nextFocusId}
         />
