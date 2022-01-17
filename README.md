@@ -13,6 +13,11 @@
 Input组件的id属性可以不传，内部利用randomId来进行处理，当然比较建议根据业务实际情况进行定义。
 
 由于组件的复杂性，目前未找到合适的打包npm的方式，如果有朋友知道如何修改的话非常欢迎。
-## 后续计划
-后续打算添加自定义车牌等功能，敬请期待。
 
+## 类组件的修改注意
+由于项目使用的是hooks运行在函数式组件中，当您需要移植到类组件的项目中（例如taro2.x的系统中，自组件用#shadow-root包裹），需要注意createSelectorQuery的使用方式，目前是从Tarojs/taro导入，但是类组件中，需要使用this.$scope.createSelectorQuery()这样才能获取到自组件中的位置信息。注意input的click事件中一定要按照bind this方式把this传进去才能完成获取组件信息。
+参见:https://developers.weixin.qq.com/community/develop/doc/000aa0f17a8af0e02d7c0ca5e56800
+
+## 后续计划
+组件类型方面打算添加自定义车牌等功能，敬请期待。
+另外针对类组件，我已经进行了更新，打算新开一个branch push上来。
