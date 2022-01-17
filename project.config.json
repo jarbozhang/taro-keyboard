@@ -2,7 +2,7 @@
   "miniprogramRoot": "dist/",
   "projectname": "taro-keyboard",
   "description": "Taro自定义键盘",
-  "appid": "wx8fa77580b28d2062",
+  "appid": "wx54f7ddca043d7b7a",
   "setting": {
     "urlCheck": true,
     "es6": false,
@@ -31,7 +31,7 @@
       "outputPath": ""
     },
     "enableEngineNative": false,
-    "useIsolateContext": true,
+    "useIsolateContext": false,
     "userConfirmedBundleSwitch": false,
     "packNpmManually": false,
     "packNpmRelationList": [],
